@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h3 style="text-align: center">HTML DOM ELEMENTS</h3>
+    
+    <hr>
+    
+    <h4>Setting element below: using document.getElementById( "IDNAME").InnerHTML
+    </h4>
+    <p id="demo"></p>
+    <script>
+        <!-- Set the InnerHTML values -->
+        document.getElementById("demo").innerHTML = "Hello World!";
+        <!-- Set the Input Value -->
+        function alterValueById() {
+            document.getElementById("inpt").value = "New Value";
+        }
+
+        function alterValueByClassName() {
+            var values = document.getElementsByClassName("inptClass");
+            values[0].value = "New Altered Value";
+            document.getElementById("elmts").innerHTML = values.length;
+        }
+
+        function findTags() {
+            document.getElementById("findTags").innerHTML = document.getElementsByTagName("p").length;
+        }
+    </script>
+
+    <hr>
+    
+    <h4>Manipulating Input Text Value using document.getElementById("IDNAME").value</h4>
+    Input Field:
+    <input type="text" id="inpt">
+    <button onclick="alterValueById()">Alter Input Value</button>
+    
+    <hr>
+
+    <h4>Manipulating Input Text value using document.getElementByClassName("CLASSNAME").value</h4>
+    <div>
+        <span>Input Field:</span>
+        <span>
+            <input type="text" class="inptClass">
+        </span>
+        <span>
+            <button onclick="alterValueByClassName()">Alter Value</button>
+        </span>
+        <span>Number of Elements with class identifier </span>
+        <span id="elmts"></span>
+    </div>
+    <br>
+    
+    <hr>
+    
+    <div>
+        <span>
+            <button onclick="findTags()">Find Tags</button>
+        </span>
+        <span>
+            <p id="findTags"></p>
+        </span>
+    </div>
+
+</body>
+</html>
