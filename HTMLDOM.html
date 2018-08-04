@@ -3,9 +3,9 @@
 
 <body>
     <h3 style="text-align: center">HTML DOM ELEMENTS</h3>
-    
+
     <hr>
-    
+
     <h4>Setting element below: using document.getElementById( "IDNAME").InnerHTML
     </h4>
     <p id="demo"></p>
@@ -26,15 +26,27 @@
         function findTags() {
             document.getElementById("findTags").innerHTML = document.getElementsByTagName("p").length;
         }
+        let variable = "";
+
+        function querySelectorEverythng() {
+            alert(variable);
+            var arr = document.querySelectorAll("p.c1QuerySelector");
+            var 
+            for (var i = 0; i < itr; i++) {
+                variable += 
+            }
+            
+            document.getElementById("rst").innerHTML = variable;
+        }
     </script>
 
     <hr>
-    
+
     <h4>Manipulating Input Text Value using document.getElementById("IDNAME").value</h4>
     Input Field:
     <input type="text" id="inpt">
     <button onclick="alterValueById()">Alter Input Value</button>
-    
+
     <hr>
 
     <h4>Manipulating Input Text value using document.getElementByClassName("CLASSNAME").value</h4>
@@ -50,9 +62,9 @@
         <span id="elmts"></span>
     </div>
     <br>
-    
+
     <hr>
-    
+
     <div>
         <span>
             <button onclick="findTags()">Find Tags</button>
@@ -62,5 +74,21 @@
         </span>
     </div>
 
+    <hr>
+    <!-- document.querySelectorAll(tagName<Delimitor>(id)|(class))-->
+    <div>
+        <span>
+            <p id="values"></p>
+            <p class="c1QuerySelector">Val1</p>
+            <p class="c1QuerySelector">Val2</p>
+            <p class="c1QuerySelector">Val3</p>
+            <p class="c1QuerySelector">Val4</p>
+    </div>
+    </span>
+    <span id="rst"></span>
+    <span>
+        <button onclick="querySelectorEverythng()">Select All Values</button>
+    </span>
 </body>
+
 </html>
