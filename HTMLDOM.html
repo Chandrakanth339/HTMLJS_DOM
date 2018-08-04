@@ -35,6 +35,7 @@
                 variable += arr[i].innerHTML;
             }
             document.getElementById("rst").innerHTML = variable;
+            variable="";
         }
     </script>
 
@@ -71,11 +72,11 @@
             <p id="findTags"></p>
         </span>
     </div>
-    
+
     <hr>
     <!-- document.querySelectorAll(tagName<Delimitor>(id)|(class))-->
     <div>
-        <span><h4>Manipulation using querySelectorAll Function</h4></span>
+        <span><h4>Manipulating Elements using querySelectorAll Function</h4></span>
         <span>
             <p id="values"></p>
             <p class="c1QuerySelector">Val1</p>
@@ -84,7 +85,7 @@
             <p class="c1QuerySelector">Val4</p>
     </div>
     </span>
-    <span id="rst"></span>
+    <p id="rst"></p>
     <span>
         <button onclick="querySelectorEverythng()">Select All Values</button>
     </span>
