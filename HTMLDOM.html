@@ -29,13 +29,11 @@
         let variable = "";
 
         function querySelectorEverythng() {
-            alert(variable);
             var arr = document.querySelectorAll("p.c1QuerySelector");
-            var 
+            var itr = arr.length;
             for (var i = 0; i < itr; i++) {
-                variable += 
+                variable += arr[i].innerHTML;
             }
-            
             document.getElementById("rst").innerHTML = variable;
         }
     </script>
@@ -73,10 +71,11 @@
             <p id="findTags"></p>
         </span>
     </div>
-
+    
     <hr>
     <!-- document.querySelectorAll(tagName<Delimitor>(id)|(class))-->
     <div>
+        <span><h4>Manipulation using querySelectorAll Function</h4></span>
         <span>
             <p id="values"></p>
             <p class="c1QuerySelector">Val1</p>
@@ -90,5 +89,4 @@
         <button onclick="querySelectorEverythng()">Select All Values</button>
     </span>
 </body>
-
 </html>
