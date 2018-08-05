@@ -78,13 +78,20 @@
 
         <hr>
         <h3 style="text-align: center">HTML DOM EVENTS</h3>
-        
+
         <h4>OnClick Text event</h4>
         <p class="clkOnMe" onclick="singleClickEvent()">Click On Me</p>
 
         <p class="clkOnMe" ondblclick="dbClickEvent()">Double Click On Me</p>
 
-        <p class="clkOnMe" onmouseover="mouseOverEvent()" >Hover mouse over to me</p>
+        <h4>Mouse Events</h4>
+
+        <p id="clkOnMeMEvent" onmouseover="mouseOverEvent()" onmouseout="mouseOutEvent()">Hover mouse over to me</p>
+
+        <p id="mouseDownUPId" onmousemove="mouseMoveEvent()" style="background-color: blueviolet;" onmousedown="mouseDownEvent()"
+            onmouseup="mouseUpEvent()">On Mouse Down/Up Events</p>
+
+        
 
 </body>
 
