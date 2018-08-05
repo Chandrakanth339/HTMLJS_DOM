@@ -48,38 +48,53 @@ function alertWindow() {
 }
 
 let tex = null;
+
 function mouseOverEvent() {
     // classNames[2].style.color = "orange";
-tex = document.getElementById("clkOnMeMEvent").innerHTML;
-document.getElementById("clkOnMeMEvent").innerHTML = "Changed Value";
+    tex = document.getElementById("clkOnMeMEvent").innerHTML;
+    document.getElementById("clkOnMeMEvent").innerHTML = "Changed Value";
 }
 
-function mouseOutEvent(){
+function mouseOutEvent() {
     // classNames[2].style.color = "green";
     document.getElementById("clkOnMeMEvent").innerHTML = tex;
 }
 
 let previousString = null;
-function mouseDownEvent(){
-    previousString  =  document.getElementById("mouseDownUPId").innerHTML;
+
+function mouseDownEvent() {
+    previousString = document.getElementById("mouseDownUPId").innerHTML;
     document.getElementById("mouseDownUPId").innerHTML = "new String";
 }
 
 
-function mouseUpEvent(){
+function mouseUpEvent() {
     document.getElementById("mouseDownUPId").innerHTML = previousString;
 }
 
 
-function keyPressEvent(){
+function keyPressEvent() {
     console.log("You Have Entered something in the input text box...");
 }
 
 
-function onChangeEvent(){
+function onChangeEvent() {
     console.log("something was changed in the input text box");
 }
 
-function keyDownEvent(){
+function keyDownEvent() {
     console.log("KeyDown event occured.....");
+}
+
+function keyUpEvent() {
+    console.log("keyUp event occured.....");
+}
+
+
+function focusEvnt() {
+    console.log("You have focussed in the input text field");
+}
+
+function blurEvnt() {
+    console.log("You have blurred focus on the input field(moved cursor elsewhere)");
 }

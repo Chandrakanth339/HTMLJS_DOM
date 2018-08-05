@@ -84,25 +84,30 @@
 
         <p class="clkOnMe" ondblclick="dbClickEvent()">Double Click On Me</p>
 
+        <hr>
+
         <h4>Mouse Events</h4>
 
         <p id="clkOnMeMEvent" onmouseover="mouseOverEvent()" onmouseout="mouseOutEvent()">Hover mouse over to me</p>
 
         <p id="mouseDownUPId" style="background-color: blueviolet;" onmousedown="mouseDownEvent()" onmouseup="mouseUpEvent()">On Mouse Down/Up Events</p>
 
+        <hr>
+
         <h4>KeyBoard Events</h4>
 
         Enter Something in adjacent text box for KeyPress Event: (look up in console)
-        <input id="keyPress" onchange="onChangeEvent()" onkeypress="keyPressEvent()"
-            type="text" value="">
+        <input id="keyPress" onchange="onChangeEvent()" onkeypress="keyPressEvent()" type="text" value="">
         <br>
-        <br> Enter Something in adjacent text box for KeyDown Event:(lookup in console)
-        <input id="keyDown" onkeydown="keyDownEvent()">
+        <br> Enter Something in adjacent text box for KeyDown/KeyUp Event(s):(lookup in console)
+        <input id="keyDown" onkeydown="keyDownEvent()" onkeyup="keyUpEvent()">
 
+        <hr>
 
-        <p></p>
-        <p></p>
+        <h4>Focus/Blur Events</h4>
 
+        <br> Focus your cursor at Adjacent Input Text field, and click on somewhere else:
+        <input onfocus="focusEvnt()" onblur="blurEvnt()" type="text">
 
 </body>
 
