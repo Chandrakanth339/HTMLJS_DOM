@@ -26,6 +26,10 @@
         function findTags() {
             document.getElementById("findTags").innerHTML = document.getElementsByTagName("p").length;
         }
+
+
+
+
         let variable = "";
 
         function querySelectorEverythng() {
@@ -35,7 +39,14 @@
                 variable += arr[i].innerHTML;
             }
             document.getElementById("rst").innerHTML = variable;
-            variable="";
+            variable = "";
+        }
+
+
+        function changeColr() {
+            document.getElementById("chngColor").style.color = "yellow";
+            document.getElementById("chngColor").style.backgroundColor = "blue";
+
         }
     </script>
 
@@ -66,6 +77,9 @@
 
     <div>
         <span>
+            <h4>Manipulating the elements by getElementsByTagName("Tag Name") function</h4>
+        </span>
+        <span>
             <button onclick="findTags()">Find Tags</button>
         </span>
         <span>
@@ -76,7 +90,9 @@
     <hr>
     <!-- document.querySelectorAll(tagName<Delimitor>(id)|(class))-->
     <div>
-        <span><h4>Manipulating Elements using querySelectorAll Function</h4></span>
+        <span>
+            <h4>Manipulating Elements using querySelectorAll Function</h4>
+        </span>
         <span>
             <p id="values"></p>
             <p class="c1QuerySelector">Val1</p>
@@ -89,5 +105,18 @@
     <span>
         <button onclick="querySelectorEverythng()">Select All Values</button>
     </span>
+
+    <hr>
+
+    <div>
+        <h4 id="chngColor">CSS Style property Manipulation Using DOM (using getElementById("").style ) </h4>
+        <span>
+            <button onclick="changeColr()">Change Color</button>
+        </span>
+    </div>
+
+    <hr>
+
 </body>
+
 </html>
