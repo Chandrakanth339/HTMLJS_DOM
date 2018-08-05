@@ -1,4 +1,3 @@
-
 document.getElementById("demo").innerHTML = "Hello World!";
 
 function alterValueById() {
@@ -14,7 +13,6 @@ function alterValueByClassName() {
 function findTags() {
     document.getElementById("findTags").innerHTML = document.getElementsByTagName("p").length;
 }
-
 
 let variable = "";
 
@@ -35,10 +33,21 @@ function changeColr() {
 
 }
 
-function chgClrOfText(){
-    document.getElementById("clkOnMe").style.color = "blue";
+let classesNames = document.getElementsByClassName("clkOnMe");
+
+function singleClickEvent() {
+
+    classesNames[0].style.color = "blue";
 }
 
-function alertWindow(){
+function dbClickEvent() {
+    classesNames[1].style.color = "yellow";
+}
+
+function mouseOverEvent() {
+    classNames[2].style.backgroundcolor = "orange";
+}
+
+function alertWindow() {
     alert("bing");
 }
