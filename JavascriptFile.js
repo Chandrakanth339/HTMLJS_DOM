@@ -1,6 +1,6 @@
-<!-- Set the InnerHTML values -->
+
 document.getElementById("demo").innerHTML = "Hello World!";
-<!-- Set the Input Value -->
+
 function alterValueById() {
     document.getElementById("inpt").value = "New Value";
 }
@@ -37,4 +37,8 @@ function changeColr() {
 
 function chgClrOfText(){
     document.getElementById("clkOnMe").style.color = "blue";
+}
+
+function alertWindow(){
+    alert("bing");
 }
