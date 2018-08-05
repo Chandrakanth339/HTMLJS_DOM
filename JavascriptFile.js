@@ -71,4 +71,15 @@ function mouseUpEvent(){
 }
 
 
+function keyPressEvent(){
+    console.log("You Have Entered something in the input text box...");
+}
 
+
+function onChangeEvent(){
+    console.log("something was changed in the input text box");
+}
+
+function keyDownEvent(){
+    console.log("KeyDown event occured.....");
+}
