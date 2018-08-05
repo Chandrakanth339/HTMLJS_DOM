@@ -34,3 +34,7 @@ function changeColr() {
     document.getElementById("chngColor").style.backgroundColor = "blue";
 
 }
+
+function chgClrOfText(){
+    document.getElementById("clkOnMe").style.color = "blue";
+}
