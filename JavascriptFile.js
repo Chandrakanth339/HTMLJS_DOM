@@ -111,13 +111,13 @@ function ajaxRequestResponse() {
         if(xhttp.readyState == 4 && xhttp.status == 200){
             
             // Add the JSON Parser to consider the response as a JSON object 
-            // var resultVariable = JSON.parse(xhttp.responseText);
-            // console.log(resultVariable);
+            var resultVariable = JSON.parse(xhttp.responseText);
+            console.log(resultVariable);
 
             // If JSON.parse is not added , then the responseText is considered as plain text and
             // whatever is the JSON response we get, it will be considered as character stream, but not as
             // JSON object
-            console.log(xhttp.responseText[0]); // WIll print { as this character is @ first index(0)
+            // console.log(xhttp.responseText[0]); // WIll print { as this character is @ first index(0)
         }
         if(xhttp.status>200 && xhttp.status<400){
             console.log("Error");
