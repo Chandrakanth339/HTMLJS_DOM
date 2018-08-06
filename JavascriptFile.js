@@ -99,9 +99,8 @@ function blurEvnt() {
     console.log("You have blurred focus on the input field(moved cursor elsewhere)");
 }
 
-
-function eventAttachWithButton(){
-    document.getElementById("eventAttach").addEventListener("click",function(){
-        alert("Yo Mama !");
-    });
-}
+window.addEventListener("load",()=>{
+document.getElementById("eventAttach").addEventListener("click", function () {
+    console.log("Triggered Event!")
+});
+});
