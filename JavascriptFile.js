@@ -100,7 +100,7 @@ function blurEvnt() {
 }
 
 window.addEventListener("load", () => {
-    document.getElementById("eventAttach").addEventListener("click", function () {
+    document.getElementById("eventAttach").addEventListener("click",  () => {
         console.log("Triggered Event!")
     });
 });
