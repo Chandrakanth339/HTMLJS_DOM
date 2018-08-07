@@ -107,22 +107,26 @@ window.addEventListener("load", () => {
 
 function ajaxRequestResponse() {
     var xhttp = new XMLHttpRequest();
+    // onreadystatechange gets triggered each time readystate property changes from 1 upthrough 4
     xhttp.onreadystatechange = () => {
-        if(xhttp.readyState == 4 && xhttp.status == 200){
-            
+
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
             // Add the JSON Parser to consider the response as a JSON object 
             var resultVariable = JSON.parse(xhttp.responseText);
             console.log(resultVariable);
+        }
 
-            // If JSON.parse is not added , then the responseText is considered as plain text and
-            // whatever is the JSON response we get, it will be considered as character stream, but not as
-            // JSON object
-            // console.log(xhttp.responseText[0]); // WIll print { as this character is @ first index(0)
-        }
-        if(xhttp.status>200 && xhttp.status<400){
-            console.log("Error");
-        }
     };
-    xhttp.open("GET","https://jsonplaceholder.typicode.com/todos/1","true",null,null);
+    // READY STATE = 3
+    xhttp.onprogress = () => {
+        console.log("Processing the Request...readyState ", xhttp.readyState);
+    }
+    // READY STATE = 4
+    // xhttp.onreadystatechange gets executed before xhttp.onload, albeit ready state is 4 for both these methods
+    xhttp.onload = () => {
+        console.log("Request processing is done and Response is Ready... readyState ", xhttp.readyState);
+    }
+    xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", "true", null, null);
+    console.log("Server Connection Established...readyState ", xhttp.readyState);
     xhttp.send();
 };
