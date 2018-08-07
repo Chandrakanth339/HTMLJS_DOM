@@ -114,6 +114,7 @@ function ajaxRequestResponse() {
             // Add the JSON Parser to consider the response as a JSON object 
             var resultVariable = JSON.parse(xhttp.responseText);
             console.log(resultVariable);
+            alert(xhttp.getResponseHeader('Content-Length'));
         }
 
     };
